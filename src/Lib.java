@@ -1,6 +1,6 @@
 public class Lib {
     private String name,noun1,noun2,noun3,noun4,adjective1,adjective2,adjective3,adjective4,adjective5,adjective6,verb1,verb2,verb3,verb4,adverb1,adverb2;
-    private String Lib1 = "";
+    private String Lib1 = "-----Welcome Class!-----\nHello everybody! adjective1 name here.";
     private String Lib2 = "";
     private String Lib3 = "";
     private int choice;
@@ -23,6 +23,11 @@ public class Lib {
         }
         return finalstr;
     }
+
+    public void setName(){
+
+    }
+
 
     public void print(){
         String temp;
