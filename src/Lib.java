@@ -1,6 +1,17 @@
+
+
+
+
+//Disclaimer: i am very far from finishing my final project,
+// so if u want more info look at the doc
+
+
+
+
 public class Lib {
-    private String name,noun1,noun2,noun3,noun4,adjective1,adjective2,adjective3,adjective4,adjective5,adjective6,verb1,verb2,verb3,verb4,adverb1,adverb2;
-    private String Lib1 = "-----Welcome Class!-----\nHello everybody! adjective1 name here.";
+    private String word;
+    private String W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12;
+    private String Lib1 = "-----Welcome Class!-----\nHello everybody! W1 W2 here...."; //these will be the uncompleted text
     private String Lib2 = "";
     private String Lib3 = "";
     private int choice;
