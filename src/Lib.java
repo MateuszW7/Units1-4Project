@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class Lib {
     //instance variables
-    private String Lib1 = "-----Welcome Class!-----\nHello everybody! W1 W2 here. \nGonna W3 W4 to you about W5. So far we've learned through most of the W6 unit, except for W5. So the W5 allows a W7 W8 to W9 the value of a W6. You will see more of this in the W10. Hope that's W11!";
-    private String Lib2 = "-----Can I Have Your Daughter's Hand?-----Dear Mr. and Mrs. W1 W2,\n\nWill you let me marry your W3? Ever since I have laid eyes on W3, I have W4 madly in love with her. I wish that she will be the W5 of my W6 and that someday we will W7 happily ever after. I have a job as a/an W8 that pays $W9 each month. I promise to W10 W3 with kindness and respect.\n\nSincerely,\nW11 W12";
-    private String Lib3 = "-----Wacky Star Wars-----\nDarth W1 looked at his master while his W2 breathing filled the room. He was told to go to W3 evrything on the planet of W4. He got in his W5 and jumped to hyperspace. Soon before he reached the planet, he dropped out of hyperspace and was attacked by Rebel W6. He W7 them off and continued to the planet`s surface. He landed and confronted more opposition, slicing it down with his W8. He used the W9 to choke another Rebel, then W10 him aside. He finished off all life on the planet with a/an W11 laugh.";
+    private String Lib1 = "-----Welcome Class!-----\nHello everybody! W1 W2 here. \nGonna W3 W4 to you about W5. So far we've learned through most of the W6 unit, except for W5. So the W5 allows a W7 W8 to W9 the value of a W6. You will see more of this in the Wa. Hope that's Wb!";
+    private String Lib2 = "-----Can I Have Your Daughter's Hand?-----Dear Mr. and Mrs. W1 W2,\n\nWill you let me marry your W3? Ever since I have laid eyes on W3, I have W4 madly in love with her. I wish that she will be the W5 of my W6 and that someday we will W7 happily ever after. I have a job as a/an W8 that pays $W9 each month. I promise to Wa W3 with kindness and respect.\n\nSincerely,\nWb Wc";
+    private String Lib3 = "-----Wacky Star Wars-----\nDarth W1 looked at his master while his W2 breathing filled the room. He was told to go to W3 evrything on the planet of W4. He got in his W5 and jumped to hyperspace. Soon before he reached the planet, he dropped out of hyperspace and was attacked by Rebel W6. He W7 them off and continued to the planet`s surface. He landed and confronted more opposition, slicing it down with his W8. He used the W9 to choke another Rebel, then Wa him aside. He finished off all life on the planet with a/an Wb laugh.";
     private int choice = 0;
     private String print = "";
 
@@ -31,84 +31,84 @@ public class Lib {
     }
     public void print1(){
         Scanner scan = new Scanner(System.in);
-            System.out.print("Please enter an adjective");
+            System.out.print("Please enter an adjective: ");
             Lib1 = replace("W1", Lib1, adjective(scan.nextLine()));
-            System.out.print("Please enter a name");
+            System.out.print("Please enter a name: ");
             Lib1 = replace("W2", Lib1, name(scan.nextLine()));
-            System.out.print("Please enter an adjective");
+            System.out.print("Please enter an adjective: ");
             Lib1 = replace("W3", Lib1, adjective(scan.nextLine()));
-            System.out.print("Please enter a verb");
+            System.out.print("Please enter a verb: ");
             Lib1 = replace("W4", Lib1, verb(scan.nextLine()));
-            System.out.print("Please enter a noun");
+            System.out.print("Please enter a noun: ");
             Lib1 = replace("W5", Lib1, noun(scan.nextLine()));
-            System.out.print("Please enter a silly word");
+            System.out.print("Please enter a silly word: ");
             Lib1 = replace("W6", Lib1, sillyWord(scan.nextLine()));
-            System.out.print("Please enter an adjective");
+            System.out.print("Please enter an adjective: ");
             Lib1 = replace("W7", Lib1, adjective(scan.nextLine()));
-            System.out.print("Please enter a noun");
+            System.out.print("Please enter a noun: ");
             Lib1 = replace("W8", Lib1, noun(scan.nextLine()));
-            System.out.print("Please enter a verb");
+            System.out.print("Please enter a verb: ");
             Lib1 = replace("W9", Lib1, verb(scan.nextLine()));
-            System.out.print("Please enter a noun");
-            Lib1 = replace("W10", Lib1, noun(scan.nextLine()));
-            System.out.print("Please enter an adjective");
-            Lib1 = replace("W11", Lib1, adjective(scan.nextLine()));
+            System.out.print("Please enter a noun: ");
+            Lib1 = replace("Wa", Lib1, noun(scan.nextLine()));
+            System.out.print("Please enter an adjective: ");
+            Lib1 = replace("Wb", Lib1, adjective(scan.nextLine()));
             print = Lib1;
         }
 
     public void print2(){
         Scanner scan = new Scanner(System.in);
-            System.out.print("Please enter an adjective");
+            System.out.print("Please enter an adjective: ");
             Lib2 = replace("W1", Lib2, adjective(scan.nextLine()));
-            System.out.print("Please enter a name");
+            System.out.print("Please enter a name: ");
             Lib2 = replace("W2", Lib2, name(scan.nextLine()));
-            System.out.print("Please enter a noun");
+            System.out.print("Please enter a noun: ");
             Lib2 = replace("W3", Lib2, noun(scan.nextLine()));
-            System.out.print("Please enter a past tense verb");
+            System.out.print("Please enter a past tense verb: ");
             Lib2 = replace("W4", Lib2, verbPast(scan.nextLine()));
-            System.out.print("Please enter a noun");
+            System.out.print("Please enter a noun: ");
             Lib2 = replace("W5", Lib2, noun(scan.nextLine()));
-            System.out.print("Please enter a noun");
+            System.out.print("Please enter a noun: ");
             Lib2 = replace("W6", Lib2, noun(scan.nextLine()));
-            System.out.print("Please enter a verb");
+            System.out.print("Please enter a verb: ");
             Lib2 = replace("W7", Lib2, verb(scan.nextLine()));
-            System.out.print("Please enter a job");
+            System.out.print("Please enter a job: ");
             Lib2 = replace("W8", Lib2, job(scan.nextLine()));
-            System.out.print("Please enter a number");
+            System.out.print("Please enter a verb: ");
+            Lib2 = replace("Wa", Lib2, verb(scan.nextLine()));
+            System.out.print("Please enter an adjective: ");
+            Lib2 = replace("Wb", Lib2, adjective(scan.nextLine()));
+            System.out.print("Please enter a name: ");
+            Lib2 = replace("Wc", Lib2, name(scan.nextLine()));
+            System.out.print("Please enter a number: ");
             Lib2 = replace("W9", Lib2, number(scan.nextDouble()));
-            System.out.print("Please enter a verb");
-            Lib2 = replace("W10", Lib2, verb(scan.nextLine()));
-            System.out.print("Please enter an adjective");
-            Lib2 = replace("W11", Lib2, adjective(scan.nextLine()));
-            System.out.print("Please enter a name");
-            Lib2 = replace("W12", Lib2, name(scan.nextLine()));
             print = Lib2;
         }
 
     public void print3(){
         Scanner scan = new Scanner(System.in);
-            System.out.print("Please enter a name");
+            System.out.print("Please enter a name: ");
             Lib3 = replace("W1", Lib3, name(scan.nextLine()));
-            System.out.print("Please enter an adjective");
+            System.out.print("Please enter an adjective: ");
             Lib3 = replace("W2", Lib3, adjective(scan.nextLine()));
-            System.out.print("Please enter a verb");
+            System.out.print("Please enter a verb: ");
             Lib3 = replace("W3", Lib3, verb(scan.nextLine()));
-            System.out.print("Please enter a silly word");
+            System.out.print("Please enter a silly word: ");
             Lib3 = replace("W4", Lib3, sillyWord(scan.nextLine()));
-            System.out.print("Please enter a noun");
+            System.out.print("Please enter a noun: ");
             Lib3 = replace("W5", Lib3, noun(scan.nextLine()));
-            System.out.print("Please enter a plural noun");
+            System.out.print("Please enter a plural noun: ");
             Lib3 = replace("W6", Lib3, nounPlur(scan.nextLine()));
-            System.out.print("Please enter a past tense verb");
+            System.out.print("Please enter a past tense verb:");
             Lib3 = replace("W7", Lib3, verbPast(scan.nextLine()));
-            System.out.print("Please enter a noun");
+            System.out.print("Please enter a noun: ");
             Lib3 = replace("W8", Lib3, noun(scan.nextLine()));
-            System.out.print("Please enter a noun");
+            System.out.print("Please enter a noun: ");
             Lib3 = replace("W9", Lib3, noun(scan.nextLine()));
-            System.out.print("Please enter a past tense verb");
-            Lib3 = replace("W10", Lib3, verbPast(scan.nextLine()));
-            System.out.print("Please enter an adjective");
-            Lib3 = replace("W11", Lib3, adjective(scan.nextLine()));
+            System.out.print("Please enter a past tense verb: ");
+            Lib3 = replace("Wa", Lib3, verbPast(scan.nextLine()));
+            System.out.print("Please enter an adjective: ");
+            Lib3 = replace("Wb", Lib3, adjective(scan.nextLine()));
             print = Lib3;
         }
 
@@ -256,15 +256,12 @@ public class Lib {
     }
 
     private String replace(String searchChar, String origStr, String replaceChar){
-        String finalstr = "";
         int strlength = searchChar.length();
-        for(int i = 0; i < origStr.length();i++){
-            if (origStr.substring(i,i+strlength-1).equals(searchChar)){
-                finalstr += replaceChar;
-            } else {
-                finalstr += origStr.substring(i,i+1);
-            }
+        int index;
+        while(origStr.indexOf(searchChar)!=-1){
+            index = origStr.indexOf(searchChar);
+            origStr = origStr.substring(0,index) + replaceChar + origStr.substring(index+strlength);
         }
-        return finalstr;
+        return origStr;
     }
 }
