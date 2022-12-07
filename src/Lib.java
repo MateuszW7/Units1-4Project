@@ -1,87 +1,138 @@
 import java.util.Scanner;
 public class Lib {
-    private String Lib1 = "-----Welcome Class!-----\nHello everybody! W1 W2 here...."; //these will be the uncompleted text
+    //instance variables
+    private String Lib1 = "-----Welcome Class!-----\nHello everybody! W1 W2 here. \nGonna W3 W4 to you about W5. So far we've learned through most of the W6 unit, except for W5. So the W5 allows a W7 W8 to W9 the value of a W6. You will see more of this in the W10. Hope that's W11!";
     private String Lib2 = "-----Can I Have Your Daughter's Hand?-----Dear Mr. and Mrs. W1 W2,\n\nWill you let me marry your W3? Ever since I have laid eyes on W3, I have W4 madly in love with her. I wish that she will be the W5 of my W6 and that someday we will W7 happily ever after. I have a job as a/an W8 that pays $W9 each month. I promise to W10 W3 with kindness and respect.\n\nSincerely,\nW11 W12";
-    private String Lib3 = "-----Wacky Star Wars-----\nDarth [Word Not Submitted] looked at his master while his [Word Not Submitted] breathing filled the room. He was told to go to [Word Not Submitted] evrything on the planet of [Word Not Submitted]. He got in his [Word Not Submitted] and jumped to hyperspace. Soon before he reached the planet, he dropped out of hyperspace and was attacked by Rebel [Word Not Submitted]. He [Word Not Submitted] them off and continued to the planet`s surface. He landed and confronted more opposition, slicing it down with his [Word Not Submitted]. He used the [Word Not Submitted] to choke another Rebel, then [Word Not Submitted] him aside. He finished off all life on the planet with a/an [Word Not Submitted] laugh.";
-    private int choice;
+    private String Lib3 = "-----Wacky Star Wars-----\nDarth W1 looked at his master while his W2 breathing filled the room. He was told to go to W3 evrything on the planet of W4. He got in his W5 and jumped to hyperspace. Soon before he reached the planet, he dropped out of hyperspace and was attacked by Rebel W6. He W7 them off and continued to the planet`s surface. He landed and confronted more opposition, slicing it down with his W8. He used the W9 to choke another Rebel, then W10 him aside. He finished off all life on the planet with a/an W11 laugh.";
+    private int choice = 0;
+    private String print = "";
+
+    //constructors
 
     public Lib(){
-        choice = 1;
+        choice = 0;
     }
     public Lib(int choice){
         this.choice = choice;
     }
-    public String replace(String searchChar, String origStr, String replaceChar){
-        String finalstr = "";
-        int strlength = searchChar.length();
-        for(int i = 0; i < origStr.length();i++){
-            if (origStr.substring(i,i+strlength).equals(searchChar)){
-                finalstr += replaceChar;
-            } else {
-                finalstr += origStr.substring(i,i+1);
-            }
-        }
-        return finalstr;
+
+
+    //public methods
+
+    public void setChoice(int choice){
+        this.choice = choice;
+    }
+    public String getPrint(){
+        return print;
     }
 
-    public String W1(String W1) { //adjective
-        if (W1.equals("random")) {
-            int random = (int) (Math.random() * 3) + 1;
-            if (random == 1) {
-                return "immense";
-            } else if (random == 2) {
-                return "elated";
-            } else {
-                return "scruffy";
-            }
-        } else {
-            return W1;
-        }
+    public int getChoice(){
+        return choice;
     }
-    public String W2(String W2) { //name
-        if (W2.equals("random")) {
-            int random = (int) (Math.random() * 3) + 1;
-            if (random == 1) {
-                return "Bill Bungleberry";
-            } else if (random == 2) {
-                return "Ryan Smith";
-            } else {
-                return "Nathan Folwell";
-            }
-        } else {
-            return W2;
+    public void print1(){
+        Scanner scan = new Scanner(System.in);
+            System.out.print("Please enter an adjective");
+            Lib1 = replace("W1", Lib1, adjective(scan.nextLine()));
+            System.out.print("Please enter a name");
+            Lib1 = replace("W2", Lib1, name(scan.nextLine()));
+            System.out.print("Please enter an adjective");
+            Lib1 = replace("W3", Lib1, adjective(scan.nextLine()));
+            System.out.print("Please enter a verb");
+            Lib1 = replace("W4", Lib1, verb(scan.nextLine()));
+            System.out.print("Please enter a noun");
+            Lib1 = replace("W5", Lib1, noun(scan.nextLine()));
+            System.out.print("Please enter a silly word");
+            Lib1 = replace("W6", Lib1, sillyWord(scan.nextLine()));
+            System.out.print("Please enter an adjective");
+            Lib1 = replace("W7", Lib1, adjective(scan.nextLine()));
+            System.out.print("Please enter a noun");
+            Lib1 = replace("W8", Lib1, noun(scan.nextLine()));
+            System.out.print("Please enter a verb");
+            Lib1 = replace("W9", Lib1, verb(scan.nextLine()));
+            System.out.print("Please enter a noun");
+            Lib1 = replace("W10", Lib1, noun(scan.nextLine()));
+            System.out.print("Please enter an adjective");
+            Lib1 = replace("W11", Lib1, adjective(scan.nextLine()));
+            print = Lib1;
         }
-    }
-    public String W3(String W3) { //noun
-        if (W3.equals("random")) {
-            int random = (int) (Math.random() * 3) + 1;
-            if (random == 1) {
-                return "bookshelf";
-            } else if (random == 2) {
-                return "ink cartridge";
-            } else {
-                return "space ship";
-            }
-        } else {
-            return W3;
+
+    public void print2(){
+        Scanner scan = new Scanner(System.in);
+            System.out.print("Please enter an adjective");
+            Lib2 = replace("W1", Lib2, adjective(scan.nextLine()));
+            System.out.print("Please enter a name");
+            Lib2 = replace("W2", Lib2, name(scan.nextLine()));
+            System.out.print("Please enter a noun");
+            Lib2 = replace("W3", Lib2, noun(scan.nextLine()));
+            System.out.print("Please enter a past tense verb");
+            Lib2 = replace("W4", Lib2, verbPast(scan.nextLine()));
+            System.out.print("Please enter a noun");
+            Lib2 = replace("W5", Lib2, noun(scan.nextLine()));
+            System.out.print("Please enter a noun");
+            Lib2 = replace("W6", Lib2, noun(scan.nextLine()));
+            System.out.print("Please enter a verb");
+            Lib2 = replace("W7", Lib2, verb(scan.nextLine()));
+            System.out.print("Please enter a job");
+            Lib2 = replace("W8", Lib2, job(scan.nextLine()));
+            System.out.print("Please enter a number");
+            Lib2 = replace("W9", Lib2, number(scan.nextDouble()));
+            System.out.print("Please enter a verb");
+            Lib2 = replace("W10", Lib2, verb(scan.nextLine()));
+            System.out.print("Please enter an adjective");
+            Lib2 = replace("W11", Lib2, adjective(scan.nextLine()));
+            System.out.print("Please enter a name");
+            Lib2 = replace("W12", Lib2, name(scan.nextLine()));
+            print = Lib2;
         }
+
+    public void print3(){
+        Scanner scan = new Scanner(System.in);
+            System.out.print("Please enter a name");
+            Lib3 = replace("W1", Lib3, name(scan.nextLine()));
+            System.out.print("Please enter an adjective");
+            Lib3 = replace("W2", Lib3, adjective(scan.nextLine()));
+            System.out.print("Please enter a verb");
+            Lib3 = replace("W3", Lib3, verb(scan.nextLine()));
+            System.out.print("Please enter a silly word");
+            Lib3 = replace("W4", Lib3, sillyWord(scan.nextLine()));
+            System.out.print("Please enter a noun");
+            Lib3 = replace("W5", Lib3, noun(scan.nextLine()));
+            System.out.print("Please enter a plural noun");
+            Lib3 = replace("W6", Lib3, nounPlur(scan.nextLine()));
+            System.out.print("Please enter a past tense verb");
+            Lib3 = replace("W7", Lib3, verbPast(scan.nextLine()));
+            System.out.print("Please enter a noun");
+            Lib3 = replace("W8", Lib3, noun(scan.nextLine()));
+            System.out.print("Please enter a noun");
+            Lib3 = replace("W9", Lib3, noun(scan.nextLine()));
+            System.out.print("Please enter a past tense verb");
+            Lib3 = replace("W10", Lib3, verbPast(scan.nextLine()));
+            System.out.print("Please enter an adjective");
+            Lib3 = replace("W11", Lib3, adjective(scan.nextLine()));
+            print = Lib3;
+        }
+
+    public String toString(){
+        return choice + "";
     }
-    public String W4(String W4) { //past tense verb
-        if (W4.equals("random")) {
+
+    //private helper methods
+    private String verbPast(String verbPast) { //past tense verb
+        if (verbPast.equals("random")) {
             int random = (int) (Math.random() * 3) + 1;
             if (random == 1) {
-                return "fallen";
+                return "fell";
             } else if (random == 2) {
                 return "painted";
             } else {
                 return "programmed";
             }
         } else {
-            return W4;
+            return verbPast;
         }
     }
-    public String W5(String W5) { //noun
-        if (W5.equals("random")) {
+    private String noun(String noun) { //noun
+        if (noun.equals("random")) {
             int random = (int) (Math.random() * 3) + 1;
             if (random == 1) {
                 return "bookshelf";
@@ -91,39 +142,11 @@ public class Lib {
                 return "space ship";
             }
         } else {
-            return W5;
+            return noun;
         }
     }
-    public String W6(String W6) { //noun
-        if (W6.equals("random")) {
-            int random = (int) (Math.random() * 3) + 1;
-            if (random == 1) {
-                return "bookshelf";
-            } else if (random == 2) {
-                return "ink cartridge";
-            } else {
-                return "space ship";
-            }
-        } else {
-            return W6;
-        }
-    }
-    public String W7(String W7) { //verb
-        if (W7.equals("random")) {
-            int random = (int) (Math.random() * 3) + 1;
-            if (random == 1) {
-                return "live";
-            } else if (random == 2) {
-                return "laugh";
-            } else {
-                return "compute";
-            }
-        } else {
-            return W7;
-        }
-    }
-    public String W8(String W8) { //job
-        if (W8.equals("random")) {
+    private String job(String job) { //job
+        if (job.equals("random")) {
             int random = (int) (Math.random() * 3) + 1;
             if (random == 1) {
                 return "game dev";
@@ -133,25 +156,19 @@ public class Lib {
                 return "roller coaster tester";
             }
         } else {
-            return W8;
+            return job;
         }
     }
-    public String W9(String W9) { //number
-        if (W9.equals("random")) {
-            int random = (int) (Math.random() * 3) + 1;
-            if (random == 1) {
-                return "69420";
-            } else if (random == 2) {
-                return "87";
-            } else {
-                return "3.14159265359";
-            }
-        } else {
-            return W9;
+    private String number(double number) { //number
+        if(number != -1){
+            return "" + number;
+        }else{
+            return Math.pow((int)(Math.random()*10),2)*24 + "";
         }
     }
-    public String W10(String W10) { //verb
-        if (W10.equals("random")) {
+
+    private String verb(String verb) { //verb
+        if (verb.equals("random")) {
             int random = (int) (Math.random() * 3) + 1;
             if (random == 1) {
                 return "laugh";
@@ -161,11 +178,11 @@ public class Lib {
                 return "compute";
             }
         } else {
-            return W10;
+            return verb;
         }
     }
-    public String W11(String W11) { //adjective
-        if (W11.equals("random")) {
+    private String adjective(String adjective) { //adjective
+        if (adjective.equals("random")) {
             int random = (int) (Math.random() * 3) + 1;
             if (random == 1) {
                 return "immense";
@@ -175,29 +192,79 @@ public class Lib {
                 return "scruffy";
             }
         } else {
-            return W11;
+            return adjective;
         }
     }
-    public String W12(String W12) { //name
-        if (W12.equals("random")) {
+    private String name(String name) { //name
+        if (name.equals("random")) {
             int random = (int) (Math.random() * 3) + 1;
             if (random == 1) {
                 return "Billy Bobblehead";
             } else if (random == 2) {
                 return "Katniss Everdeen";
             } else {
-                return "Mat Wargacki";
+                return "Nathan Folwell";
             }
         } else {
-            return W12;
+            return name;
         }
     }
 
-    public void print(){
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Please enter an adjective");
-        Lib1 = replace("W1",Lib1,W1(scan.nextLine()));
+    private String adverb(String adverb) { //adverb
+        if (adverb.equals("random")) {
+            int random = (int) (Math.random() * 3) + 1;
+            if (random == 1) {
+                return "shakily";
+            } else if (random == 2) {
+                return "sternly";
+            } else {
+                return "vigorously";
+            }
+        } else {
+            return adverb;
+        }
+    }
 
+    private String sillyWord(String sillyWord) { //silly word
+        if (sillyWord.equals("random")) {
+            int random = (int) (Math.random() * 3) + 1;
+            if (random == 1) {
+                return "quackadiles";
+            } else if (random == 2) {
+                return "bazzingas";
+            } else {
+                return "bumfuzzle";
+            }
+        } else {
+            return sillyWord;
+        }
+    }
 
+    private String nounPlur(String nounPlur) { //plural noun
+        if (nounPlur.equals("random")) {
+            int random = (int) (Math.random() * 3) + 1;
+            if (random == 1) {
+                return "burgers";
+            } else if (random == 2) {
+                return "wheels";
+            } else {
+                return "noses";
+            }
+        } else {
+            return nounPlur;
+        }
+    }
+
+    private String replace(String searchChar, String origStr, String replaceChar){
+        String finalstr = "";
+        int strlength = searchChar.length();
+        for(int i = 0; i < origStr.length();i++){
+            if (origStr.substring(i,i+strlength-1).equals(searchChar)){
+                finalstr += replaceChar;
+            } else {
+                finalstr += origStr.substring(i,i+1);
+            }
+        }
+        return finalstr;
     }
 }

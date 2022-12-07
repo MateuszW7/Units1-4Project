@@ -40,6 +40,20 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/BT_3W2_06/IdeaProjects/Units1-4Project&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="MadLibs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MadLibs" />
+      <module name="Units1-4Project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MadLibs" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
