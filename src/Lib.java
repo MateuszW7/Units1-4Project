@@ -1,17 +1,27 @@
 import java.util.Scanner;
+
+/**
+ * The Lib class takes user imputed words and puts them into a string to make a wacky story.
+ */
 public class Lib {
-    //instance variables
-    private String Lib1 = "-----Welcome Class!-----\nHello everybody! W1 W2 here. \nGonna W3 W4 to you about W5. So far we've learned through most of the W6 unit, except for W5. So the W5 allows a W7 W8 to W9 the value of a W6. You will see more of this in the Wa. Hope that's Wb!";
-    private String Lib2 = "-----Can I Have Your Daughter's Hand?-----Dear Mr. and Mrs. W1 W2,\n\nWill you let me marry your W3? Ever since I have laid eyes on W3, I have W4 madly in love with her. I wish that she will be the W5 of my W6 and that someday we will W7 happily ever after. I have a job as a/an W8 that pays $W9 each month. I promise to Wa W3 with kindness and respect.\n\nSincerely,\nWb Wc";
-    private String Lib3 = "-----Wacky Star Wars-----\nDarth W1 looked at his master while his W2 breathing filled the room. He was told to go to W3 evrything on the planet of W4. He got in his W5 and jumped to hyperspace. Soon before he reached the planet, he dropped out of hyperspace and was attacked by Rebel W6. He W7 them off and continued to the planet`s surface. He landed and confronted more opposition, slicing it down with his W8. He used the W9 to choke another Rebel, then Wa him aside. He finished off all life on the planet with a/an Wb laugh.";
+    private String Lib1 = "-----Welcome Class!-----\nHello everybody! W1 W2 here. \nGonna W3 W4 to you about W5. \nSo far we've learned through most of the W6 unit, except for W5. \nSo the W5 allows a W7 W8 to W9 the value of a W6. \nYou will see more of this in the Wa. \n\nHope that's Wb!";
+    private String Lib2 = "-----Can I Have Your Daughter's Hand?-----Dear Mr. and Mrs. W1 W2,\n\nWill you let me marry your W3? \nEver since I have laid eyes on W3, I have W4 madly in love with her. \nI wish that she will be the W5 of my W6 and that someday we will W7 happily ever after. \nI have a job as a/an W8 that pays $W9 each month. \nI promise to Wa W3 with kindness and respect.\n\nSincerely,\nWb Wc";
+    private String Lib3 = "-----Wacky Star Wars-----\nDarth W1 looked at his master while his W2 breathing filled the room. \nHe was told to go to W3 everything on the planet of W4. \nHe got in his W5 and jumped to hyperspace. \nSoon before he reached the planet, he dropped out of hyperspace and was attacked by Rebel W6. \nHe W7 them off and continued to the planet`s surface. \nHe landed and confronted more opposition, slicing it down with his W8. \nHe used the W9 to choke another Rebel, then Wa him aside. \nHe finished off all life on the planet with a/an Wb laugh.";
     private int choice = 0;
     private String print = "";
 
     //constructors
-
+    /**
+     * The no parameter constructor defaults the story to story 1
+     */
     public Lib(){
         choice = 0;
     }
+
+    /**
+     * The single parameter constructor takes the choice and chooses that story later on
+     * @param choice represents which story will be used later
+     */
     public Lib(int choice){
         this.choice = choice;
     }
@@ -19,16 +29,33 @@ public class Lib {
 
     //public methods
 
+    /**
+     * set method that sets the choice of story to a new choice of story
+     * @param choice represents which story will be used later
+     */
     public void setChoice(int choice){
         this.choice = choice;
     }
+
+    /**
+     * get method that returns a string with the final completed story
+     * @return returns the completed story
+     */
     public String getPrint(){
         return print;
     }
 
+    /**
+     * get method that returns the story choice
+     * @return returns the story choice
+     */
     public int getChoice(){
         return choice;
     }
+
+    /**
+     * void method used to replace and complete story 1
+     */
     public void print1(){
         Scanner scan = new Scanner(System.in);
             System.out.print("Please enter an adjective: ");
@@ -55,7 +82,9 @@ public class Lib {
             Lib1 = replace("Wb", Lib1, adjective(scan.nextLine()));
             print = Lib1;
         }
-
+    /**
+     * void method used to replace and complete story 2
+     */
     public void print2(){
         Scanner scan = new Scanner(System.in);
             System.out.print("Please enter an adjective: ");
@@ -84,7 +113,9 @@ public class Lib {
             Lib2 = replace("W9", Lib2, number(scan.nextDouble()));
             print = Lib2;
         }
-
+    /**
+     * void method used to replace and complete story 3
+     */
     public void print3(){
         Scanner scan = new Scanner(System.in);
             System.out.print("Please enter a name: ");
@@ -112,6 +143,10 @@ public class Lib {
             print = Lib3;
         }
 
+    /**
+     * toString method for the Lib class, which returns the choice of story
+     * @return returns a string showing the users choice of story
+     */
     public String toString(){
         return choice + "";
     }
